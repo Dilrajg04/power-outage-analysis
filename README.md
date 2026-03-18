@@ -11,9 +11,22 @@ The dataset contains **1534 rows and 57 columns**. Each row represents an outage
 
 <iframe src="assets/outages_over_time.html" width="800" height="500" frameborder="0"></iframe>
 
+This plot shows how the number of major outages changes over time. There is a noticeable spike around 2011, suggesting an increase in major outages during that period.
+
+<iframe src="assets/duration_distribution.html" width="800" height="500" frameborder="0"></iframe>
+
+Most outages are relatively short, but a small number of extreme outages create a highly right-skewed distribution. To better visualize this pattern, a log transformation is applied to the outage duration.
+
+<iframe src="assets/duration_by_cause.html" width="800" height="500" frameborder="0"></iframe>
+
+This box plot shows how outage duration varies across different causes. Outages caused by severe weather tend to have longer durations and more extreme values compared to outages caused by other factors. This supports the results of the hypothesis test and suggests that cause category is an important feature when predicting outage duration.
+
 ---
 
 ## Assessment of Missingness
+<iframe src="assets/missingness_plot.html" width="800" height="500" frameborder="0"></iframe>
+
+This plot shows that the missingness of `CUSTOMERS.AFFECTED` changes across cause categories, which supports the result that its missingness depends on `CAUSE.CATEGORY`.
 The missingness in CUSTOMERS.AFFECTED is MNAR as the amount of affected customers may be dependent on the scale of the outage. Smaller outages may lead to reports of only a few customers affected, while the larger outages may cause a flow of significant reports. According to the permutation test results, the missingness of CUSTOMERS.AFFECTED depends on the CAUSE.CATEGORY and not the YEAR.
 
 
@@ -47,6 +60,9 @@ Current Training RMSE: **4887.97**
 Current Test RMSE: **7161.60**
 
 ## Final Model
+<iframe src="assets/predicted_vs_actual.html" width="800" height="500" frameborder="0"></iframe>
+
+This plot compares the model’s predicted outage durations to the actual outage durations. While the predictions are not perfect, the final model captures the overall pattern much better than the baseline model.
 The final model achieves a training RMSE of **3179.62** and test RMSE of **3240.79**.
 
 The new model uses grid search to find the best hyperparameters, which are **5 for max_depth** and **100 for n_estimators**. Furthermore, the added features (`CLIMATE.CATEGORY`, `CUSTOMERS.AFFECTED`, and `TOTAL.SALES`) are useful to understand outage duration, as they are likely to be influenced by environmental conditions, scale of the outage, and local electricity demand. Since both of the outputs are closer than before, the model is most likely not overfitting.
