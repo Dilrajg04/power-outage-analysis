@@ -67,7 +67,7 @@ Current Training RMSE: **4887.97**
 Current Test RMSE: **7161.60**
 
 ## Final Model
-<iframe src="assets/predicted_vs_actual.html" width="800" height="500" frameborder="0"></iframe>
+<iframe src="assets/predicted_vs_actual.html" width="100%" height="500" frameborder="0"></iframe>
 
 This plot compares the model’s predicted outage durations to the actual outage durations. While the predictions are not perfect, the final model captures the overall pattern much better than the baseline model.
 The final model achieves a training RMSE of **3179.62** and test RMSE of **3240.79**.
