@@ -19,8 +19,9 @@ Most outages are relatively short, but a small number of extreme outages create 
 
 <iframe src="assets/duration_by_cause.html" width="800" height="500" frameborder="0"></iframe>
 
-This box plot shows how outage duration varies across different causes. Outages caused by severe weather tend to have longer durations and more extreme values compared to outages caused by other factors. This supports the results of the hypothesis test and suggests that cause category is an important feature when predicting outage duration.
+This box plot shows how outage duration varies across different causes. Outages caused by severe weather tend to have longer durations and more extreme values compared to outages caused by other factors.
 
+This plot reinforces the hypothesis test by showing that severe weather outages tend to have higher durations and a wider spread than other outage causes.
 ---
 
 ## Assessment of Missingness
@@ -65,7 +66,7 @@ Current Test RMSE: **7161.60**
 This plot compares the model’s predicted outage durations to the actual outage durations. While the predictions are not perfect, the final model captures the overall pattern much better than the baseline model.
 The final model achieves a training RMSE of **3179.62** and test RMSE of **3240.79**.
 
-The new model uses grid search to find the best hyperparameters, which are **5 for max_depth** and **100 for n_estimators**. Furthermore, the added features (`CLIMATE.CATEGORY`, `CUSTOMERS.AFFECTED`, and `TOTAL.SALES`) are useful to understand outage duration, as they are likely to be influenced by environmental conditions, scale of the outage, and local electricity demand. Since both of the outputs are closer than before, the model is most likely not overfitting.
+The new model uses grid search to find the best hyperparameters, max_depth** = **5 and n_estimators** = **100**. Furthermore, the added features (`CLIMATE.CATEGORY`, `CUSTOMERS.AFFECTED`, and `TOTAL.SALES`) are useful to understand outage duration, as they are likely to be influenced by environmental conditions, scale of the outage, and local electricity demand. Since both of the outputs are closer than before, the model is most likely not overfitting.
 
 ## Fairness Analysis
 The fairness analysis will consist of two groups. Group X will be outages caused by severe weather and Group Y will be outages caused by other factors. We are using RMSE as a metric for this regression problem.
