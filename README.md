@@ -59,5 +59,10 @@ Alternative Hypothesis: The final model is unfair, and RMSE for weather-related 
 
 Test Statistic: Difference in RMSE (Outages caused by severe weather − Outages caused by other factors)  
 
-Significance Level: 0.05  
+Significance Level: **0.05**  
+
+Observed difference in RMSE is approximately: **1023.75**
+Approximate p-value: **0.109**
+
+Since the p-value is greater than our significance level, we fail to reject the null hypothesis. There is strong evidence to suggest that any observed difference is due to random chance and our model is most likely not unfair to these group.
 
