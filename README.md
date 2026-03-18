@@ -64,5 +64,5 @@ Significance Level: **0.05**
 Observed difference in RMSE is approximately: **1023.75**
 Approximate p-value: **0.109**
 
-Since the p-value is greater than our significance level, we fail to reject the null hypothesis. There is strong evidence to suggest that any observed difference is due to random chance and our model is most likely not unfair to these group.
+Since the p-value is greater than our significance level, we fail to reject the null hypothesis. This suggests that any observed difference is likely due to random chance, and the model does not appear to be unfair to these groups.
 
