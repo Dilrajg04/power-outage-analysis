@@ -25,7 +25,13 @@ Alternative Hypothesis: Outages caused by severe weather have longer average dur
 Test Statistic: Difference in mean  
 (Mean of outages caused by severe weather − Mean of outages caused by other causes)  
 
-Significance Level: 0.05  
+Significance Level: 0.05 
+
+The difference in mean outage duration is 2537 minutes.
+
+p-value: Approximately 0.0
+
+Since the p-value is below the 0.05 significance level, we reject the null hypothesis. The results provide strong evidence that outages caused by severe weather tend to be longer in duration than outages caused by other factors.
 
 ---
 
@@ -34,7 +40,7 @@ The goal is to predict `OUTAGE.DURATION`, which requires this to be a regression
 
 ---
 ## Baseline Model
-WEBSITE: The baseline model predicts OUTAGE.DURATION using features like CAUSE.CATEGORY and YEAR. Since CAUSE.CATEGORY is a catigorical feature, we use one-hot encoding to extract meaningful value for our model. My project utilizes a sklearn pipline to perform linear regression and analyize performance through RMSE scores on the test set.
+WEBSITE: The baseline model predicts OUTAGE.DURATION using features like CAUSE.CATEGORY and YEAR. Since CAUSE.CATEGORY is a categorical feature, we use one-hot encoding to extract meaningful value for our model. My project utilizes a sklearn pipline to perform linear regression and analyize performance through RMSE scores on the test set.
 
 Current Training RMSE: **4887.97**
 Current Test RMSE: **7161.60**
