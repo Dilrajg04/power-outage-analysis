@@ -4,6 +4,10 @@ By Dilraj Grewal
 ## Introduction
 This project focuses on exploring power outages across the United States to discover patterns and factors that affect outage duration. The dataset covers different outage causes, climate conditions, outage durations, and how they affect customers. Furthermore, the project utilizes predictive models to estimate outage duration based on the features stated before. 
 
+### Key Features
+
+The dataset includes features such as `OUTAGE.DURATION`, which measures how long an outage lasts, `CAUSE.CATEGORY`, which describes the reason for the outage, and `CLIMATE.CATEGORY`, which captures environmental conditions. Other variables like `CUSTOMERS.AFFECTED` and `TOTAL.SALES` provide information about the scale and impact of each outage.
+
 The dataset contains **1534 rows and 57 columns**. Each row represents an outage event.
 
 
