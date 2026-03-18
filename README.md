@@ -53,7 +53,7 @@ The goal is to predict `OUTAGE.DURATION`, which requires this to be a regression
 
 ---
 ## Baseline Model
-WEBSITE: The baseline model predicts OUTAGE.DURATION using features like CAUSE.CATEGORY and YEAR. Since CAUSE.CATEGORY is a categorical feature, we use one-hot encoding to extract meaningful value for our model. My project utilizes a sklearn pipline to perform linear regression and analyize performance through RMSE scores on the test set.
+The baseline model predicts OUTAGE.DURATION using features like CAUSE.CATEGORY and YEAR. Since CAUSE.CATEGORY is a categorical feature, we use one-hot encoding to extract meaningful value for our model. My project utilizes a sklearn pipline to perform linear regression and analyize performance through RMSE scores on the test set.
 
 Current Training RMSE: **4887.97**
 
@@ -82,5 +82,4 @@ Observed difference in RMSE is approximately: **1023.75**
 
 Approximate p-value: **0.109**
 
-Since the p-value is greater than our significance level, we fail to reject the null hypothesis. This suggests that any observed difference is likely due to random chance, and the model does not appear to be unfair to these groups.
-
+Since the p-value is greater than our significance level, we fail to reject the null hypothesis. This suggests that any observed difference is likely due to random chance, and the model does not appear to systematically disadvantage either group.
