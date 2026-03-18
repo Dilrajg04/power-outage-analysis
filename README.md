@@ -25,7 +25,9 @@ Most outages are relatively short, but a small number of extreme outages create 
 
 This box plot shows how outage duration varies across different causes. Outages caused by severe weather tend to have longer durations and more extreme values compared to outages caused by other factors.
 
+
 This plot reinforces the hypothesis test by showing that severe weather outages tend to have higher durations and a wider spread than other outage causes.
+
 ---
 
 ## Assessment of Missingness
